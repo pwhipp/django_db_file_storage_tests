@@ -36,7 +36,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'file_uploader')
+    'file_uploader',
+    'db_file_storage')
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -82,3 +83,5 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 MEDIA_ROOT = '/tmp/'  # This is all just for testing
+
+DEFAULT_FILE_STORAGE = 'db_file_storage.storage.DatabaseFileStorage'
